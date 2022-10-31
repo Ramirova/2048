@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="GameViewController" customModule="_048" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NMp-Mm-tq0" customClass="GameBoardView" customModule="_048" customModuleProvider="target">
+                                <rect key="frame" x="20" y="176" width="335" height="335"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NMp-Mm-tq0" secondAttribute="height" multiplier="1:1" id="VpA-mG-Kog"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Nm-Lt-9nq" customClass="RoundedButtonWithShadow" customModule="_048" customModuleProvider="target">
+                                <rect key="frame" x="93.5" y="551" width="188" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="FCe-pa-PCI"/>
+                                    <constraint firstAttribute="width" constant="188" id="jaS-KU-okv"/>
+                                </constraints>
+                                <state key="normal" title="Попробовать ещё раз">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onRestartButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yuh-zo-qD5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Лучший результат: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vge-dG-pzA">
+                                <rect key="frame" x="20" y="140" width="156" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Счет:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4h-mc-qeV">
+                                <rect key="frame" x="20" y="86.5" width="79" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.95294117647058818" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Vge-dG-pzA" firstAttribute="top" secondItem="Z4h-mc-qeV" secondAttribute="bottom" constant="15" id="1D1-M9-5S7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NMp-Mm-tq0" secondAttribute="trailing" constant="20" id="E04-gh-HiO"/>
+                            <constraint firstItem="NMp-Mm-tq0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Kkk-I7-gaT"/>
+                            <constraint firstItem="NMp-Mm-tq0" firstAttribute="top" secondItem="Vge-dG-pzA" secondAttribute="bottom" constant="15" id="TXo-DO-qOT"/>
+                            <constraint firstItem="2Nm-Lt-9nq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Wga-Tg-ij9"/>
+                            <constraint firstItem="Vge-dG-pzA" firstAttribute="leading" secondItem="NMp-Mm-tq0" secondAttribute="leading" id="byP-Qo-w1V"/>
+                            <constraint firstItem="Z4h-mc-qeV" firstAttribute="leading" secondItem="Vge-dG-pzA" secondAttribute="leading" id="dd6-1S-Yzu"/>
+                            <constraint firstItem="NMp-Mm-tq0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="f67-Ym-6zx"/>
+                            <constraint firstItem="NMp-Mm-tq0" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="gbP-5l-R1C"/>
+                            <constraint firstItem="2Nm-Lt-9nq" firstAttribute="top" secondItem="NMp-Mm-tq0" secondAttribute="bottom" constant="40" id="ygQ-49-BMQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bestScoreLabel" destination="Vge-dG-pzA" id="t7d-eI-bO5"/>
+                        <outlet property="gameBoardView" destination="NMp-Mm-tq0" id="tqL-Iz-9P1"/>
+                        <outlet property="restartButton" destination="2Nm-Lt-9nq" id="0K0-UD-YxJ"/>
+                        <outlet property="scoreLabel" destination="Z4h-mc-qeV" id="Xb9-Er-fkl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="129.98500749625188"/>
+        </scene>
+    </scenes>
+</document>
